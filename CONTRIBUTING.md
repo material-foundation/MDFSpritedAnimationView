@@ -35,8 +35,7 @@ frustration later on.
 
 ### Code reviews
 
-All submissions, including submissions by project members, require review. We
-allow pull requests to be filed, but we perform code reviews on codereview.cc.
+All submissions, including submissions by project members, require review.
 
 ### The small print
 
