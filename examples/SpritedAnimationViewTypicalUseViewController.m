@@ -14,26 +14,32 @@
  limitations under the License.
  */
 
-#import "ViewController.h"
+#import "SpritedAnimationViewTypicalUseViewController.h"
 
 #import "GOSSpritedAnimationView.h"
 
-static NSString *const kSpriteChecked = @"gos_sprite_check__hide";
-static NSString *const kSpriteUnchecked = @"gos_sprite_check__show";
+static NSString *const kSpriteList = @"gos_sprite_list__grid";
+static NSString *const kSpriteGrid = @"gos_sprite_grid__list";
 
-@implementation ViewController {
+@implementation SpritedAnimationViewTypicalUseViewController {
   GOSSpritedAnimationView *_animationView;
-  BOOL _checked;
+  BOOL _toggle;
+}
+
++ (NSArray *)catalogHierarchy {
+  // Support for catalog by convention.
+  return @[ @"Sprited Animation View", @"Typical use" ];
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  _checked = YES;
   self.view.backgroundColor = [UIColor whiteColor];
 
-  // Sprited animation view.
-  UIImage *spriteImage = [UIImage imageNamed:kSpriteChecked];
+  NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+  UIImage *spriteImage = [UIImage imageNamed:kSpriteList
+                                    inBundle:bundle
+               compatibleWithTraitCollection:nil];
   _animationView = [[GOSSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
   _animationView.frame = CGRectMake(0, 0, 30, 30);
   _animationView.center = self.view.center;
@@ -42,7 +48,7 @@ static NSString *const kSpriteUnchecked = @"gos_sprite_check__show";
 
   // Add label with tap instructions.
   UILabel *label = [[UILabel alloc] initWithFrame:CGRectOffset(self.view.bounds, 0, 30)];
-  label.text = @"Tap anywhere to animate checkmark.";
+  label.text = @"Tap anywhere to animate icon.";
   label.textColor = [UIColor colorWithWhite:0 alpha:0.8];
   label.textAlignment = NSTextAlignmentCenter;
   [self.view addSubview:label];
@@ -61,8 +67,11 @@ static NSString *const kSpriteUnchecked = @"gos_sprite_check__show";
   [_animationView startAnimatingWithCompletion:^{
 
     // When animation completes, toggle image.
-    _checked = !_checked;
-    UIImage *spriteImage = [UIImage imageNamed:_checked ? kSpriteChecked : kSpriteUnchecked];
+    _toggle = !_toggle;
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    UIImage *spriteImage = [UIImage imageNamed:_toggle ? kSpriteGrid : kSpriteList
+                                      inBundle:bundle
+                 compatibleWithTraitCollection:nil];
     _animationView.spriteSheetImage = spriteImage;
 
     recognizer.enabled = YES;
