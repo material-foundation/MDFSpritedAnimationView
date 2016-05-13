@@ -1,4 +1,5 @@
 # GOSSpritedAnimationView
+[![Build Status](https://travis-ci.org/google/GOSSpritedAnimationView.svg?branch=master)](https://travis-ci.org/google/GOSSpritedAnimationView)
 
 This control provides an alternative to animating an array of images with an `UIImageView`. Only a
 single image composed of individual sprite frames is used, and animation simply consists of
