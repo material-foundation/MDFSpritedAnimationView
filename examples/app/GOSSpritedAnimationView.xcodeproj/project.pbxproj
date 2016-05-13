@@ -15,8 +15,8 @@
 		5D090DF91C99A2900061344A /* SpritedAnimationViewTypicalUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D090DF81C99A2900061344A /* SpritedAnimationViewTypicalUseViewController.m */; };
 		5D090DFD1C99A2C10061344A /* GOSSpritedAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D090DFC1C99A2C10061344A /* GOSSpritedAnimationView.m */; };
 		5D090E001C99A36B0061344A /* SpritedAnimationView.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D090DFF1C99A36B0061344A /* SpritedAnimationView.xcassets */; };
-		5D090E051C99A4D70061344A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D090E031C99A4D70061344A /* Info.plist */; };
-		5D090E061C99A4D70061344A /* GOSSpritedAnimationViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D090E041C99A4D70061344A /* GOSSpritedAnimationViewTests.m */; };
+		5DBC8D961CE65066006D5BB8 /* GOSSpritedAnimationViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC8D931CE65066006D5BB8 /* GOSSpritedAnimationViewTests.m */; };
+		5DBC8D971CE65066006D5BB8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DBC8D951CE65066006D5BB8 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +38,14 @@
 		5D090DDE1C99A1E70061344A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D090DE11C99A1E70061344A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D090DE31C99A1E70061344A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D090DE81C99A1E70061344A /* GOSSpritedAnimationViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOSSpritedAnimationViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D090DE81C99A1E70061344A /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D090DF71C99A2900061344A /* SpritedAnimationViewTypicalUseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpritedAnimationViewTypicalUseViewController.h; path = ../../SpritedAnimationViewTypicalUseViewController.h; sourceTree = "<group>"; };
 		5D090DF81C99A2900061344A /* SpritedAnimationViewTypicalUseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpritedAnimationViewTypicalUseViewController.m; path = ../../SpritedAnimationViewTypicalUseViewController.m; sourceTree = "<group>"; };
 		5D090DFB1C99A2C10061344A /* GOSSpritedAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOSSpritedAnimationView.h; sourceTree = "<group>"; };
 		5D090DFC1C99A2C10061344A /* GOSSpritedAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOSSpritedAnimationView.m; sourceTree = "<group>"; };
 		5D090DFF1C99A36B0061344A /* SpritedAnimationView.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SpritedAnimationView.xcassets; sourceTree = "<group>"; };
-		5D090E031C99A4D70061344A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D090E041C99A4D70061344A /* GOSSpritedAnimationViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOSSpritedAnimationViewTests.m; sourceTree = "<group>"; };
+		5DBC8D931CE65066006D5BB8 /* GOSSpritedAnimationViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOSSpritedAnimationViewTests.m; sourceTree = "<group>"; };
+		5DBC8D951CE65066006D5BB8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5D090DCF1C99A1E70061344A /* GOSSpritedAnimationView.app */,
-				5D090DE81C99A1E70061344A /* GOSSpritedAnimationViewTests.xctest */,
+				5D090DE81C99A1E70061344A /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,19 +132,27 @@
 		5D090E011C99A4D70061344A /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				5D090E021C99A4D70061344A /* unit */,
+				5DBC8D921CE65066006D5BB8 /* unit */,
 			);
 			name = tests;
 			path = ../../tests;
 			sourceTree = "<group>";
 		};
-		5D090E021C99A4D70061344A /* unit */ = {
+		5DBC8D921CE65066006D5BB8 /* unit */ = {
 			isa = PBXGroup;
 			children = (
-				5D090E031C99A4D70061344A /* Info.plist */,
-				5D090E041C99A4D70061344A /* GOSSpritedAnimationViewTests.m */,
+				5DBC8D931CE65066006D5BB8 /* GOSSpritedAnimationViewTests.m */,
+				5DBC8D941CE65066006D5BB8 /* resources */,
 			);
 			path = unit;
+			sourceTree = "<group>";
+		};
+		5DBC8D941CE65066006D5BB8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DBC8D951CE65066006D5BB8 /* Info.plist */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +175,9 @@
 			productReference = 5D090DCF1C99A1E70061344A /* GOSSpritedAnimationView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5D090DE71C99A1E70061344A /* GOSSpritedAnimationViewTests */ = {
+		5D090DE71C99A1E70061344A /* UnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D090DF41C99A1E70061344A /* Build configuration list for PBXNativeTarget "GOSSpritedAnimationViewTests" */;
+			buildConfigurationList = 5D090DF41C99A1E70061344A /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
 				5D090DE41C99A1E70061344A /* Sources */,
 				5D090DE51C99A1E70061344A /* Frameworks */,
@@ -180,9 +188,9 @@
 			dependencies = (
 				5D090DEA1C99A1E70061344A /* PBXTargetDependency */,
 			);
-			name = GOSSpritedAnimationViewTests;
+			name = UnitTests;
 			productName = GOSSpritedAnimationViewTests;
-			productReference = 5D090DE81C99A1E70061344A /* GOSSpritedAnimationViewTests.xctest */;
+			productReference = 5D090DE81C99A1E70061344A /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +225,7 @@
 			projectRoot = "";
 			targets = (
 				5D090DCE1C99A1E70061344A /* GOSSpritedAnimationView */,
-				5D090DE71C99A1E70061344A /* GOSSpritedAnimationViewTests */,
+				5D090DE71C99A1E70061344A /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D090E051C99A4D70061344A /* Info.plist in Resources */,
+				5DBC8D971CE65066006D5BB8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D090E061C99A4D70061344A /* GOSSpritedAnimationViewTests.m in Sources */,
+				5DBC8D961CE65066006D5BB8 /* GOSSpritedAnimationViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,9 +410,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ../../tests/unit/Info.plist;
+				INFOPLIST_FILE = ../../tests/unit/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.GOSSpritedAnimationViewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GOSSpritedAnimationView.app/GOSSpritedAnimationView";
 			};
@@ -414,9 +422,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ../../tests/unit/Info.plist;
+				INFOPLIST_FILE = ../../tests/unit/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.GOSSpritedAnimationViewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GOSSpritedAnimationView.app/GOSSpritedAnimationView";
 			};
@@ -443,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D090DF41C99A1E70061344A /* Build configuration list for PBXNativeTarget "GOSSpritedAnimationViewTests" */ = {
+		5D090DF41C99A1E70061344A /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D090DF51C99A1E70061344A /* Debug */,

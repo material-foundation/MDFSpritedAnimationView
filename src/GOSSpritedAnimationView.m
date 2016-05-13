@@ -18,8 +18,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-static NSString *const kGOSSpriteAnimationKey = @"spriteAnimate";
-static const NSInteger kGOSSpriteFrameRateDefault = 60;
+static NSString *const kSpriteAnimationKey = @"spriteAnimate";
+static const NSInteger kSpriteFrameRateDefault = 60;
 
 @interface GOSSpritedAnimationView ()
 @property(nonatomic, assign) NSInteger numberOfFrames;
@@ -53,7 +53,7 @@ static const NSInteger kGOSSpriteFrameRateDefault = 60;
     _spriteLayer.bounds = self.layer.bounds;
     [self.layer addSublayer:_spriteLayer];
 
-    _frameRate = kGOSSpriteFrameRateDefault;
+    _frameRate = kSpriteFrameRateDefault;
     _singleFrameWidthInPercent = 1;
     _animationRepeatCount = 1;
     [self setSpriteSheetImage:spriteSheetImage];
@@ -94,13 +94,13 @@ static const NSInteger kGOSSpriteFrameRateDefault = 60;
     animation.removedOnCompletion = NO;
   }
 
-  [self.spriteLayer addAnimation:animation forKey:kGOSSpriteAnimationKey];
+  [self.spriteLayer addAnimation:animation forKey:kSpriteAnimationKey];
   [CATransaction commit];
 }
 
 - (void)stop {
   // Removing the animation will cause the completion block to be also called.
-  [self.spriteLayer removeAnimationForKey:kGOSSpriteAnimationKey];
+  [self.spriteLayer removeAnimationForKey:kSpriteAnimationKey];
 }
 
 - (void)seekToBeginning {
@@ -115,7 +115,7 @@ static const NSInteger kGOSSpriteFrameRateDefault = 60;
 }
 
 - (BOOL)isAnimating {
-  return ([self.spriteLayer animationForKey:kGOSSpriteAnimationKey] != nil);
+  return ([self.spriteLayer animationForKey:kSpriteAnimationKey] != nil);
 }
 
 #pragma mark - Mask Color Handling
