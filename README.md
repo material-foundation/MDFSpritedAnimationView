@@ -27,11 +27,6 @@ $ pod install
 
 - - -
 
-## Requirements
-
-- Xcode 7.0 or higher
-- iOS SDK version 7.0 or higher
-
 ## Create a sprite sheet asset
 
 A sprite sheet consists of a single image composed of a single column of individual sprite frames.
