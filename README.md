@@ -4,6 +4,29 @@ This control provides an alternative to animating an array of images with an `UI
 single image composed of individual sprite frames is used, and animation simply consists of
 updating the layer `contentsRect`.
 
+## Installation
+
+### Requirements
+
+- Xcode 7.0 or higher.
+- iOS SDK version 7.0 or higher.
+
+### Installation with CocoaPods
+
+To add this component to your Xcode project using CocoaPods, add the following to your `Podfile`:
+
+~~~ bash
+pod 'GOSScrollViewDelegateMultiplexer'
+~~~
+
+Then, run the following command:
+
+~~~ bash
+$ pod install
+~~~
+
+- - -
+
 ## Requirements
 
 - Xcode 7.0 or higher
