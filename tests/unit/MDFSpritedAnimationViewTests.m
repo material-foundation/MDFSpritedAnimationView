@@ -16,7 +16,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import "GOSSpritedAnimationView.h"
+#import "MDFSpritedAnimationView.h"
 
 static NSString *const kSpriteList = @"gos_sprite_list__grid";
 static NSString *const kExpectationDescription = @"animatingWithCompletion";
@@ -38,8 +38,8 @@ static NSString *const kExpectationDescription = @"animatingWithCompletion";
 - (void)testAnimationCompletion {
   // Sprited animation view.
   UIImage *spriteImage = [UIImage imageNamed:kSpriteList];
-  GOSSpritedAnimationView *animationView =
-      [[GOSSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
+  MDFSpritedAnimationView *animationView =
+      [[MDFSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
 
   // Create expectation.
   XCTestExpectation *expectation = [self expectationWithDescription:kExpectationDescription];
@@ -64,8 +64,8 @@ static NSString *const kExpectationDescription = @"animatingWithCompletion";
 
                            // Sprited animation view.
                            UIImage *spriteImage = [UIImage imageNamed:kSpriteList];
-                           GOSSpritedAnimationView *animationView =
-                               [[GOSSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
+                           MDFSpritedAnimationView *animationView =
+                               [[MDFSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
 
                            // Create expectation.
                            XCTestExpectation *expectation = [self expectationWithDescription:kExpectationDescription];

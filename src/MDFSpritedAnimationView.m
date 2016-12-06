@@ -14,20 +14,20 @@
  limitations under the License.
  */
 
-#import "GOSSpritedAnimationView.h"
+#import "MDFSpritedAnimationView.h"
 
 #import <QuartzCore/QuartzCore.h>
 
 static NSString *const kSpriteAnimationKey = @"spriteAnimate";
 static const NSInteger kSpriteFrameRateDefault = 60;
 
-@interface GOSSpritedAnimationView ()
+@interface MDFSpritedAnimationView ()
 @property(nonatomic, assign) NSInteger numberOfFrames;
 @property(nonatomic, assign) CGFloat singleFrameWidthInPercent;  // 1 / numberOfFrames
 @property(nonatomic, strong) CALayer *spriteLayer;
 @end
 
-@implementation GOSSpritedAnimationView
+@implementation MDFSpritedAnimationView
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
   [self doesNotRecognizeSelector:_cmd];

@@ -1,5 +1,5 @@
-# GOSSpritedAnimationView
-[![Build Status](https://travis-ci.org/google/GOSSpritedAnimationView.svg?branch=master)](https://travis-ci.org/google/GOSSpritedAnimationView)
+# MDFSpritedAnimationView
+[![Build Status](https://travis-ci.org/google/MDFSpritedAnimationView.svg?branch=master)](https://travis-ci.org/google/MDFSpritedAnimationView)
 
 This control provides an alternative to animating an array of images with an `UIImageView`. Only a
 single image composed of individual sprite frames is used, and animation simply consists of
@@ -17,7 +17,7 @@ updating the layer `contentsRect`.
 To add this component to your Xcode project using CocoaPods, add the following to your `Podfile`:
 
 ~~~ bash
-pod 'GOSScrollViewDelegateMultiplexer'
+pod 'MDFScrollViewDelegateMultiplexer'
 ~~~
 
 Then, run the following command:
@@ -79,12 +79,12 @@ animation completes for each state, and be replaced with the other sprite image.
 Integrating the `spritedAnimationView` is somewhat similar to adding an `UIImageView` to a view.
 
 ```objectivec
-#import "GOSSpritedAnimationView.h"
+#import "MDFSpritedAnimationView.h"
 
 // Create a Sprited Animation View.
 UIImage *spriteSheet = [UIImage imageNamed:@"myImage"];
-GOSSpritedAnimationView *animationView =
-    [[GOSSpritedAnimationView alloc] initWithSpriteSheetImage:spriteSheet];
+MDFSpritedAnimationView *animationView =
+    [[MDFSpritedAnimationView alloc] initWithSpriteSheetImage:spriteSheet];
 animationView.tintColor = [UIColor blueColor];
 [self.view addSubview:animationView];
 

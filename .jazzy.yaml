@@ -1,4 +1,4 @@
-module_name: GOSSpritedAnimationView
-umbrella_header: src/GOSSpritedAnimationView.h
+module_name: MDFSpritedAnimationView
+umbrella_header: src/MDFSpritedAnimationView.h
 objc: true
 sdk: iphonesimulator
