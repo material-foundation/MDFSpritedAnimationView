@@ -1,5 +1,5 @@
 PODS:
-  - MDFSpritedAnimationView (1.0.0)
+  - MDFSpritedAnimationView (2.0.0)
 
 DEPENDENCIES:
   - MDFSpritedAnimationView (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  MDFSpritedAnimationView: 8e39a7e39596cd7f3ebb1b3dff8b6f058c278cbb
+  MDFSpritedAnimationView: 91e3a415e50ec36ea19c0fcb46905eaaff2f16fc
 
 PODFILE CHECKSUM: 80195f268febc54d39de014ff5b21653bbb11547
 
