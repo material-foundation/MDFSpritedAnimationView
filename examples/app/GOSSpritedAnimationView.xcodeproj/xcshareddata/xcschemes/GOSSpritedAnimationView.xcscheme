@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D090DCE1C99A1E70061344A"
-               BuildableName = "GOSSpritedAnimationView.app"
-               BlueprintName = "GOSSpritedAnimationView"
-               ReferencedContainer = "container:GOSSpritedAnimationView.xcodeproj">
+               BuildableName = "MDFSpritedAnimationView.app"
+               BlueprintName = "MDFSpritedAnimationView"
+               ReferencedContainer = "container:MDFSpritedAnimationView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "5D090DE71C99A1E70061344A"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
-               ReferencedContainer = "container:GOSSpritedAnimationView.xcodeproj">
+               ReferencedContainer = "container:MDFSpritedAnimationView.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5D090DCE1C99A1E70061344A"
-            BuildableName = "GOSSpritedAnimationView.app"
-            BlueprintName = "GOSSpritedAnimationView"
-            ReferencedContainer = "container:GOSSpritedAnimationView.xcodeproj">
+            BuildableName = "MDFSpritedAnimationView.app"
+            BlueprintName = "MDFSpritedAnimationView"
+            ReferencedContainer = "container:MDFSpritedAnimationView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5D090DCE1C99A1E70061344A"
-            BuildableName = "GOSSpritedAnimationView.app"
-            BlueprintName = "GOSSpritedAnimationView"
-            ReferencedContainer = "container:GOSSpritedAnimationView.xcodeproj">
+            BuildableName = "MDFSpritedAnimationView.app"
+            BlueprintName = "MDFSpritedAnimationView"
+            ReferencedContainer = "container:MDFSpritedAnimationView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5D090DCE1C99A1E70061344A"
-            BuildableName = "GOSSpritedAnimationView.app"
-            BlueprintName = "GOSSpritedAnimationView"
-            ReferencedContainer = "container:GOSSpritedAnimationView.xcodeproj">
+            BuildableName = "MDFSpritedAnimationView.app"
+            BlueprintName = "MDFSpritedAnimationView"
+            ReferencedContainer = "container:MDFSpritedAnimationView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

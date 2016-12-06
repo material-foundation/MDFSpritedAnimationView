@@ -20,13 +20,13 @@
 
 #import "SpritedAnimationViewTypicalUseViewController.h"
 
-#import "GOSSpritedAnimationView.h"
+#import "MDFSpritedAnimationView.h"
 
 static NSString *const kSpriteList = @"gos_sprite_list__grid";
 static NSString *const kSpriteGrid = @"gos_sprite_grid__list";
 
 @implementation SpritedAnimationViewTypicalUseViewController {
-  GOSSpritedAnimationView *_animationView;
+  MDFSpritedAnimationView *_animationView;
   BOOL _toggle;
 }
 
@@ -44,7 +44,7 @@ static NSString *const kSpriteGrid = @"gos_sprite_grid__list";
   UIImage *spriteImage = [UIImage imageNamed:kSpriteList
                                     inBundle:bundle
                compatibleWithTraitCollection:nil];
-  _animationView = [[GOSSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
+  _animationView = [[MDFSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
   _animationView.frame = CGRectMake(0, 0, 30, 30);
   _animationView.center = self.view.center;
   _animationView.tintColor = [UIColor blueColor];

@@ -21,4 +21,4 @@ before_install:
   - git submodule update
 script:
   - set -o pipefail
-  - xcodebuild -workspace examples/app/GOSSpritedAnimationView.xcworkspace -scheme GOSSpritedAnimationView -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build test | xcpretty -c;
+  - xcodebuild -workspace examples/app/MDFSpritedAnimationView.xcworkspace -scheme MDFSpritedAnimationView -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build test | xcpretty -c;

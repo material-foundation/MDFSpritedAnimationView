@@ -23,7 +23,7 @@
  a single image composed of individual sprite frames is used, and animation simply consists of
  updating the layer contentsRect.
  */
-@interface GOSSpritedAnimationView : UIView
+@interface MDFSpritedAnimationView : UIView
 
 /**
  Optional tint color of the icon.
