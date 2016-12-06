@@ -1,0 +1,5 @@
+target "MDFSpritedAnimationViewExample" do
+  pod 'MDFSpritedAnimationView', :path => '../../'
+  target 'MDFSpritedAnimationViewExampleTests' do
+  end
+end
