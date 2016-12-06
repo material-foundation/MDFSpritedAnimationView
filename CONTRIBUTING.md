@@ -21,7 +21,8 @@ In short (slightly modified from the original article):
 
 This repository follows a file layout convention that ensures consistency and
 predictability across all of our components. The conventions are described in
-the [MDF-conventions](https://github.com/google/MDF-conventions) repository.
+the [MDF-conventions](https://github.com/material-foundation/material-foundation-conventions-objc)
+repository.
 
 ### Before you contribute
 
