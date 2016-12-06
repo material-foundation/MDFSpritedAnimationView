@@ -14,7 +14,4 @@
  limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
-
-@interface SpritedAnimationViewTypicalUseViewController : UIViewController
-@end
+#import "MDFSpritedAnimationView.h"

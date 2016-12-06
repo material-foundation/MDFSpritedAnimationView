@@ -1,32 +1,18 @@
 # MDFSpritedAnimationView
 [![Build Status](https://travis-ci.org/google/MDFSpritedAnimationView.svg?branch=master)](https://travis-ci.org/google/MDFSpritedAnimationView)
 
+![SpritedAnimationView](docs/assets/sprited_animation_view.png)
+<!--{: .ios-screenshot .right }-->
+
 This control provides an alternative to animating an array of images with an `UIImageView`. Only a
 single image composed of individual sprite frames is used, and animation simply consists of
 updating the layer `contentsRect`.
+<!--{: .intro }-->
 
-## Installation
+## Requirements
 
-### Requirements
-
-- Xcode 7.0 or higher.
-- iOS SDK version 7.0 or higher.
-
-### Installation with CocoaPods
-
-To add this component to your Xcode project using CocoaPods, add the following to your `Podfile`:
-
-~~~ bash
-pod 'MDFScrollViewDelegateMultiplexer'
-~~~
-
-Then, run the following command:
-
-~~~ bash
-$ pod install
-~~~
-
-- - -
+- Xcode 7.0 or higher
+- iOS SDK version 7.0 or higher
 
 ## Create a sprite sheet asset
 
@@ -58,13 +44,13 @@ animation completes for each state, and be replaced with the other sprite image.
 
 | List Sprite Sheet | Grid Sprite Sheet |
 | :---------------------------: | :---------------------------: |
-| ![List Icon](examples/resources/SpritedAnimationView.xcassets/gos_sprite_list__grid.imageset/gos_sprite_list__grid.png) | ![Grid Icon](examples/resources/SpritedAnimationView.xcassets/gos_sprite_grid__list.imageset/gos_sprite_grid__list.png) |
+| ![List Icon](examples/resources/SpritedAnimationView.xcassets/sprite_list__grid.imageset/sprite_list__grid.png) | ![Grid Icon](examples/resources/SpritedAnimationView.xcassets/sprite_grid__list.imageset/sprite_grid__list.png) |
 
 #### Two-state example
 
 ```objectivec
 // Animate the sprited view.
-[_animationView startAnimatingWithCompletion:^{
+[_animationView startAnimatingWithCompletion:^(BOOL finished) {
 
   // When animation completes, toggle image.
   _toggle = !_toggle;
@@ -76,10 +62,27 @@ animation completes for each state, and be replaced with the other sprite image.
 
 ## Usage
 
+### Importing
+
+Before using Sprited Animation View, you'll need to import it:
+
+<!--<div class="material-code-render" markdown="1">-->
+#### Objective-C
+
+~~~ objc
+#import "MaterialSpritedAnimationView.h"
+~~~
+
+#### Swift
+~~~ swift
+import MaterialComponents
+~~~
+<!--</div>-->
+
 Integrating the `spritedAnimationView` is somewhat similar to adding an `UIImageView` to a view.
 
 ```objectivec
-#import "MDFSpritedAnimationView.h"
+#import "MaterialSpritedAnimationView.h"
 
 // Create a Sprited Animation View.
 UIImage *spriteSheet = [UIImage imageNamed:@"myImage"];
@@ -89,7 +92,7 @@ animationView.tintColor = [UIColor blueColor];
 [self.view addSubview:animationView];
 
 // To Animate.
-[animationView startAnimatingWithCompletion:^{
+[animationView startAnimatingWithCompletion:^(BOOL finished) {
     NSLog(@"Done animating.");
 }];
 ```

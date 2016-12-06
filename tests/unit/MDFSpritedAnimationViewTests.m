@@ -1,5 +1,5 @@
 /*
- Copyright 2015-present Google Inc. All Rights Reserved.
+ Copyright 2015-present the Material Components for iOS authors. All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 #import <XCTest/XCTest.h>
 
-#import "MDFSpritedAnimationView.h"
+#import "MaterialSpritedAnimationView.h"
 
-static NSString *const kSpriteList = @"gos_sprite_list__grid";
+static NSString *const kSpriteList = @"mdc_sprite_list__grid";
 static NSString *const kExpectationDescription = @"animatingWithCompletion";
 
 @interface SpritedAnimationViewTests : XCTestCase
@@ -45,7 +45,7 @@ static NSString *const kExpectationDescription = @"animatingWithCompletion";
   XCTestExpectation *expectation = [self expectationWithDescription:kExpectationDescription];
 
   // Fulfill expectation after completion of animation.
-  [animationView startAnimatingWithCompletion:^{
+  [animationView startAnimatingWithCompletion:^(BOOL completion) {
     [expectation fulfill];
   }];
 
@@ -53,33 +53,6 @@ static NSString *const kExpectationDescription = @"animatingWithCompletion";
                                handler:^(NSError *error) {
                                  XCTAssertEqual(error, nil);
                                }];
-}
-
-- (void)testAnimationPerformance {
-  NSArray *metrics = [[self class] defaultPerformanceMetrics];
-  [self measureMetrics:metrics
-      automaticallyStartMeasuring:NO
-                         forBlock:^{
-                           [self startMeasuring];
-
-                           // Sprited animation view.
-                           UIImage *spriteImage = [UIImage imageNamed:kSpriteList];
-                           MDFSpritedAnimationView *animationView =
-                               [[MDFSpritedAnimationView alloc] initWithSpriteSheetImage:spriteImage];
-
-                           // Create expectation.
-                           XCTestExpectation *expectation = [self expectationWithDescription:kExpectationDescription];
-
-                           // Fulfill expectation after completion of animation.
-                           [animationView startAnimatingWithCompletion:^{
-                             [expectation fulfill];
-                           }];
-
-                           [self waitForExpectationsWithTimeout:1.0
-                                                        handler:^(NSError *error) {
-                                                          [self stopMeasuring];
-                                                        }];
-                         }];
 }
 
 @end
