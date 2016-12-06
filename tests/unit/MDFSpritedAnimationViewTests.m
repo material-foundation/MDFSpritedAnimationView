@@ -16,9 +16,9 @@
 
 #import <XCTest/XCTest.h>
 
-#import "MDFSpritedAnimationView.h"
+#import "MaterialSpritedAnimationView.h"
 
-static NSString *const kSpriteList = @"gos_sprite_list__grid";
+static NSString *const kSpriteList = @"mdc_sprite_list__grid";
 static NSString *const kExpectationDescription = @"animatingWithCompletion";
 
 @interface SpritedAnimationViewTests : XCTestCase
@@ -45,7 +45,7 @@ static NSString *const kExpectationDescription = @"animatingWithCompletion";
   XCTestExpectation *expectation = [self expectationWithDescription:kExpectationDescription];
 
   // Fulfill expectation after completion of animation.
-  [animationView startAnimatingWithCompletion:^{
+  [animationView startAnimatingWithCompletion:^(BOOL completion) {
     [expectation fulfill];
   }];
 
@@ -71,8 +71,8 @@ static NSString *const kExpectationDescription = @"animatingWithCompletion";
                            XCTestExpectation *expectation = [self expectationWithDescription:kExpectationDescription];
 
                            // Fulfill expectation after completion of animation.
-                           [animationView startAnimatingWithCompletion:^{
-                             [expectation fulfill];
+                           [animationView startAnimatingWithCompletion:^(BOOL finished) {
+                               [expectation fulfill];
                            }];
 
                            [self waitForExpectationsWithTimeout:1.0
