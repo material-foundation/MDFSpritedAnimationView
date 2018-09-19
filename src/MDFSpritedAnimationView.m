@@ -80,7 +80,7 @@ static const NSInteger kSpriteFrameRateDefault = 60;
 - (CGSize)intrinsicContentSize {
   if (_spriteSheetImage) {
     CGFloat width = _spriteSheetImage.size.width;
-    return CGSizeMake(width, width);
+    return CGSizeMake(width, _spriteSheetImage.size.height / _numberOfFrames);
   }
   return [super intrinsicContentSize];
 }
