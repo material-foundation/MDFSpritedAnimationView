@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "MDFSpritedAnimationView"
-  s.version      = "3.0.0"
-  s.authors      = { 'Chris Cox' => 'cjcox@google.com' }
+  s.version      = "3.1.0"
+  s.authors      = { 'Randall Li' => 'randallli@google.com', 'Chris Cox' => 'cjcox@google.com' }
   s.summary      = "A control providing an alternative to animating an array of images with an UIImageView."
   s.homepage     = "https://github.com/material-foundation/MDFSpritedAnimationView"
   s.license      = 'Apache 2.0'
