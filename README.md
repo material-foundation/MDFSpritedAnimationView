@@ -96,3 +96,32 @@ animationView.tintColor = [UIColor blueColor];
     NSLog(@"Done animating.");
 }];
 ```
+
+## Bazel support
+
+This library can be depended on by adding a dependency to your project's `WORKSPACE` file...
+
+```
+git_repository(
+    name = "material_sprited_animation_view_ios",
+    remote = "https://github.com/material-foundation/material-sprited-animation-view-ios.git",
+    commit = "<#fill me in#>",
+)
+```
+
+...and then depending on the target in your `BUILD` files:
+
+```
+  deps = [
+    "@material_sprited_animation_view_ios//:MDFSpritedAnimationView",
+  ],
+```
+
+### Build and test with Bazel
+
+The source can be built and tested using [Bazel](http://bazel.build/):
+
+```bash
+bazel build  --ios_sdk_version=13.2  --apple_platform_type=ios //...
+bazel test  --ios_sdk_version=13.2  --apple_platform_type=ios //...
+```
